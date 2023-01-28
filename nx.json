@@ -1,0 +1,59 @@
+{
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": ["build", "build:test", "build:desktop"],
+        "accessToken": "ZWM3ODgxNDgtNGUzZC00MjQ0LWE3MzMtZDdhMzE3ZGY2MWFlfHJlYWQ="
+      }
+    }
+  },
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [
+        "{projectRoot}/build",
+        "{projectRoot}/dist",
+        "{projectRoot}/languages"
+      ]
+    },
+    "build:test": {
+      "dependsOn": ["^build"],
+      "outputs": ["{projectRoot}/build"]
+    },
+    "build:desktop": {
+      "dependsOn": ["^build"],
+      "outputs": ["{projectRoot}/build"]
+    },
+    "start": {
+      "dependsOn": ["^build"]
+    },
+    "test:e2e": {
+      "dependsOn": ["^build"]
+    },
+    "test": {
+      "dependsOn": ["^build"]
+    },
+    "run-android": {
+      "dependsOn": ["^build"]
+    },
+    "run-ios": {
+      "dependsOn": ["^build"]
+    },
+    "build-ios": {
+      "dependsOn": ["^build"]
+    },
+    "build-android": {
+      "dependsOn": ["^build"]
+    },
+    "release-android": {
+      "dependsOn": ["^build"]
+    },
+    "release-android-bundle": {
+      "dependsOn": ["^build"]
+    },
+    "release-ios": {
+      "dependsOn": ["^build"]
+    }
+  }
+}
