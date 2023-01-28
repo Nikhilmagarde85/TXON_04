@@ -1,5 +1,5 @@
 {
-  "name": "chatgpt",
+  "name": "Notes",
   "version": "0.0.0",
   "scripts": {
     "dev:fe": "vite",
